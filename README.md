@@ -1,3 +1,5 @@
-git clone https://github.com/grachet/react-gmap-places-saver.git
+git clone https://github.com/grachet/react-projects-boilerplate.git
+
 npm i
+
 npm start
