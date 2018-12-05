@@ -83,7 +83,7 @@ class SimpleDialog extends React.Component {
       [<Dialog key={1} onClose={closeUsersModal}
                aria-labelledby="simple-dialog-title"
                open={this.props.open}>
-        <DialogTitle id="simple-dialog-title">Users on project {project && project.travelName}</DialogTitle>
+        <DialogTitle id="simple-dialog-title">Users on project {project && project.projectName}</DialogTitle>
         <div>
           <List>
             {project && _.values(project.users).map(user => (
@@ -115,7 +115,7 @@ class SimpleDialog extends React.Component {
           open={this.state.openAddContact}
           onCancel={this.closeAddUser}
           onOk={this.onOkAddUser}
-          title={"Add user on project " + (project && project.travelName)}
+          title={"Add user on project " + (project && project.projectName)}
           selectfield={[{
             title: "User", name: "uid",
             titleValues: names, values: usersId

@@ -3,7 +3,7 @@ import './styles/App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Home from '../screens/Home'
 import Setting from '../screens/Setting'
-import Travel from '../screens/Travel'
+import Project from '../screens/Project'
 import {createMuiTheme, MuiThemeProvider} from '@material-ui/core/styles';
 import {connect} from 'react-redux';
 import {fetchUser,fetchUsers} from "../redux/actions/user";
@@ -60,7 +60,7 @@ class App extends Component {
             <Route exact path="/" component={SignIn} />
             <Route path="/home" component={requireAuth(Home)} />
             <Route path='/setting' component={requireAuth(Setting)}/>
-            <Route path='/travel/:id' component={requireAuth(Travel)}/>
+            <Route path='/travel/:id' component={requireAuth(Project)}/>
             <Route component={Home}/>
           </Switch>
         </Router>

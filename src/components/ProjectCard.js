@@ -56,10 +56,7 @@ class ProjectCard extends Component {
                         component={Link} className={classes.wmax}>
           <CardContent>
             <Typography gutterBottom variant="headline" component="h2">
-              {this.props.project.travelName}
-            </Typography>
-            <Typography component="p">
-              {this.props.project.country}
+              {this.props.project.projectName}
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -92,7 +89,7 @@ class ProjectCard extends Component {
         </CardActions>
         <AlertDialogue
           open={this.state.openAlertDeleteProject}
-          title={"Delete the project « " + (this.props.project.travelName) + " » ?"}
+          title={"Delete the project « " + (this.props.project.projectName) + " » ?"}
           onClose={this.onCloseDeleteProject}
           onOk={this.onOKDeleteProject}
         />

@@ -78,7 +78,7 @@ class Home extends Component {
           onOk={this.onValidateCreateProject}
           title={"New travel"}
           text={"Where do you want to go ?"}
-          textfield={[{title : "Travel name", name : "travelName"},{title : "Country", name : "country"}]}
+          textfield={[{title : "Project name", name : "projectName"}]}
         />
         <UsersModal
           users={this.props.users}
@@ -87,7 +87,7 @@ class Home extends Component {
           openUsersModal={this.openUsersModal}
           project={this.props.projects && this.props.projects[this.projectId]}
           open={this.state.openUsersModal}/>
-        <Typography variant="display1" className={classes.myl} color="textPrimary">My travels</Typography>
+        <Typography variant="display1" className={classes.myl} color="textPrimary">My projects</Typography>
         <Grid container className={classes.cardContainer} spacing={24}>
           {projects && _.orderBy(_.values(projects), function (o) {
             return new moment(o.creationTimestamp);
