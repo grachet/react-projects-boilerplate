@@ -1,5 +1,5 @@
 export const FirebaseConfig = {
-  apiKey: "AIzaSyB8OpDlMJVeEeLb5MavfetlQakh6WHjySs",
-  authDomain: "react-gmap-place-server.firebaseapp.com",
-  databaseURL: "react-gmap-place-server.firebaseapp.com"
+  apiKey: "AIzaSyBSkOimI0ab9rAshxUo7kW8ziG5hOWBYzA",
+  authDomain: "react-projects-boilerplate.firebaseapp.com",
+  databaseURL: "react-projects-boilerplate.firebaseapp.com"
 };
