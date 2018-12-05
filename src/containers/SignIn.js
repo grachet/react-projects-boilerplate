@@ -36,7 +36,7 @@ class Signin extends Component {
     return (
       <div className={classes.root}>
         <Paper className={classes.paperContainer} elevation={2}>
-          <Typography variant="display1" className={classes.loginTitle} color="textPrimary">Maps Saver</Typography>
+          <Typography variant="display1" className={classes.loginTitle} color="textPrimary">React Projects Boilerplate</Typography>
           <Typography variant="subheading" className={classes.loginSubtitle} color="textPrimary">By Guillaume
             Rachet</Typography>
 
