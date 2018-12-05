@@ -51,12 +51,12 @@ class Home extends Component {
       ...project,
       projectId: id,
       creationTimestamp: moment().format(),
-      owner : uid,
+      owner: uid,
       users: {
         [uid]: {
           "role": "Project Manager",
           uid,
-          name : email || displayName,
+          name: email || displayName,
         }
       }
     });
@@ -78,7 +78,7 @@ class Home extends Component {
           onOk={this.onValidateCreateProject}
           title={"New travel"}
           text={"Where do you want to go ?"}
-          textfield={[{title : "Project name", name : "projectName"}]}
+          textfield={[{title: "Project name", name: "projectName"}]}
         />
         <UsersModal
           users={this.props.users}

@@ -6,8 +6,7 @@ import {bindActionCreators} from 'redux';
 
 class Home extends Component {
 
-  state = {
-  };
+  state = {};
 
   render() {
     const {id} = this.props.match.params;

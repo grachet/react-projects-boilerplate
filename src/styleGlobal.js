@@ -51,7 +51,7 @@ const baseStyles = {
     position: 'fixed',
     bottom: 80,
     right: 80,
-    zIndex:1000
+    zIndex: 1000
   }
 
 

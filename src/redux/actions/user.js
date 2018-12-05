@@ -1,4 +1,4 @@
-import {FETCH_USERS, FETCH_USER, TOGGLE_THEME} from './action.types'
+import {FETCH_USER, FETCH_USERS, TOGGLE_THEME} from './action.types'
 import {
   authRef,
   EmailProvider,
@@ -39,10 +39,10 @@ export const signIn = (provider) => dispatch => {
       authRef
         .signInWithPopup(GoogleProvider)
         .then(result => {
-            firebase.database().ref('users/' + result.user.uid).set({
-              name: (result.user.email || result.user.displayName) + " (google)",
-              uid: result.user.uid
-            });
+          firebase.database().ref('users/' + result.user.uid).set({
+            name: (result.user.email || result.user.displayName) + " (google)",
+            uid: result.user.uid
+          });
         })
         .catch(error => {
           console.log(error);
@@ -52,10 +52,10 @@ export const signIn = (provider) => dispatch => {
       authRef
         .signInWithPopup(FacebookProvider)
         .then(result => {
-            firebase.database().ref('users/' + result.user.uid).set({
-              name: (result.user.email || result.user.displayName) + " (facebook)",
-              uid: result.user.uid
-            });
+          firebase.database().ref('users/' + result.user.uid).set({
+            name: (result.user.email || result.user.displayName) + " (facebook)",
+            uid: result.user.uid
+          });
         })
         .catch(error => {
           console.log(error);
@@ -65,10 +65,10 @@ export const signIn = (provider) => dispatch => {
       authRef
         .signInWithPopup(GithubProvider)
         .then(result => {
-            firebase.database().ref('users/' + result.user.uid).set({
-              name: (result.user.email || result.user.displayName) + " (github)",
-              uid: result.user.uid
-            });
+          firebase.database().ref('users/' + result.user.uid).set({
+            name: (result.user.email || result.user.displayName) + " (github)",
+            uid: result.user.uid
+          });
         })
         .catch(error => {
           console.log(error);

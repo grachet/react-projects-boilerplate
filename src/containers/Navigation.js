@@ -7,7 +7,6 @@ import LightIcon from '@material-ui/icons/Opacity';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 
 import SettingsIcon from '@material-ui/icons/Settings';
-import Logo from '@material-ui/icons/PinDrop';
 
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
@@ -39,11 +38,9 @@ class MenuAppBar extends React.Component {
 
       <AppBar position="fixed">
         <Toolbar>
-          <Logo/>
-
           <Typography to={"/home"}
                       component={Link} variant="title" color="inherit" className={classes.title}>
-            Maps
+            G. Rachet
           </Typography>
 
           <Typography variant="title" color="inherit" className={classes.title}>
