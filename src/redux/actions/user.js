@@ -7,6 +7,8 @@ import {
   GoogleProvider,
   usersRef
 } from "../../config/firebase";
+
+import {fetchProjects} from './projects'
 import * as firebase from "firebase";
 
 
@@ -19,6 +21,7 @@ export function toggleTheme() {
 export const fetchUser = () => dispatch => {
   authRef.onAuthStateChanged(user => {
     if (user) {
+      dispatch(fetchProjects(user.uid));
       dispatch({
         type: FETCH_USER,
         payload: user
@@ -26,7 +29,7 @@ export const fetchUser = () => dispatch => {
     } else {
       dispatch({
         type: FETCH_USER,
-        payload: null
+        payload: "notConnected"
       });
     }
   });

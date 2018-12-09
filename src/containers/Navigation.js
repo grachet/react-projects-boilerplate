@@ -38,7 +38,7 @@ class MenuAppBar extends React.Component {
 
       <AppBar position="fixed">
         <Toolbar>
-          <Typography to={"/home"}
+          <Typography to={"/"}
                       component={Link} variant="title" color="inherit" className={classes.title}>
             G. Rachet
           </Typography>

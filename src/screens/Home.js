@@ -45,7 +45,7 @@ class Home extends Component {
 
   onValidateCreateProject = (project) => {
     //todo
-    const {uid, email, displayName} = this.props.currentUser;
+    const {uid, email, displayName} = this.props.user;
     let id = uniqid()
     this.props.updateProject({
       ...project,
@@ -106,7 +106,7 @@ class Home extends Component {
 
 const mapStateToProps = ({user, projects, users}) => {
   return {
-    projects, currentUser: user, users
+    projects, user, users
   };
 }
 

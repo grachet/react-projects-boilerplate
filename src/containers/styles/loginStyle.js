@@ -18,6 +18,15 @@ export default {
 
     color: color.text
   },
+  loader: {
+    textAlign: "center",
+    marginTop: "15%"
+  },
+  loaderContainer: {
+    height: "100vh",
+    width: "100vw",
+    overflow : "hidden"
+  },
   loginSubtitle: {
     color: color.accent,
     marginBottom: 10

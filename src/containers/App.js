@@ -20,7 +20,6 @@ class App extends Component {
   componentWillMount() {
     this.props.fetchUser();
     this.props.fetchUsers();
-    this.props.fetchProjects();
   }
 
   render() {
@@ -56,11 +55,11 @@ class App extends Component {
         <CssBaseline/>
         <Router basename={`${process.env.PUBLIC_URL}/`}>
           <Switch>
-            <Route exact path="/" component={SignIn}/>
-            <Route path="/home" component={requireAuth(Home)}/>
+            <Route exact path="/" component={requireAuth(Home)}/>
+            <Route path="/auth" component={SignIn}/>
             <Route path='/setting' component={requireAuth(Setting)}/>
-            <Route path='/travel/:id' component={requireAuth(Project)}/>
-            <Route component={Home}/>
+            <Route path='/project/:id' component={requireAuth(Project)}/>
+            <Route component={requireAuth(Home)}/>
           </Switch>
         </Router>
       </MuiThemeProvider>

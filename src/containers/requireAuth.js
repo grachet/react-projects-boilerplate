@@ -1,27 +1,27 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
+import Loader from "../components/Loader";
 
 export default function (ComposedComponent) {
   class Authentication extends Component {
 
     componentWillMount() {
-      if (this.props.authenticated === null) {
-        this.props.history.push("/")
+      if (this.props.authenticated === "notConnected") {
+        this.props.history.push("/auth")
       }
     }
 
     componentWillUpdate(nextProps) {
-      if (!nextProps.authenticated) {
-
-        this.props.history.push("/")
+      if (this.props.authenticated === "notConnected" || nextProps.authenticated === "notConnected") {
+        this.props.history.push("/auth")
       }
     }
 
     render() {
-      if (this.props.authenticated) {
+      if (this.props.authenticated && this.props.authenticated !== "notConnected") {
         return <ComposedComponent {...this.props} />;
       }
-      return null;
+      return <Loader/>;
     }
   }
 
