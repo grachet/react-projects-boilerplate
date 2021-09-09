@@ -1,10 +1,13 @@
-demo url : https://react-projects-boilerplate.firebaseapp.com/
+#react-projects-boilerplate 
 
-git clone https://github.com/grachet/react-projects-boilerplate.git
+A boiler plate to manage users and projects in react, material ui, redux, firebase
 
-npm i
+[demo](https://react-projects-boilerplate.firebaseapp.com/)
 
-npm start
 
-deploy with firebase
-https://dev.to/aurelkurtula/hosting-a-react-app-with-firebase-28a4
+``` 
+npm i 
+npm start 
+npm run build
+firebase deploy   
+```
