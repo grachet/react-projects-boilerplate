@@ -1,4 +1,4 @@
-#react-projects-boilerplate 
+# react-projects-boilerplate 
 
 A boiler plate to manage users and projects in react, material ui, redux, firebase
 
